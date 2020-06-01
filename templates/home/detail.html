@@ -5,5 +5,7 @@
     <div class="post-entry">
         <h2>{{ object.title }}</h2>
         <p>{{ object.body }}</p>
+        <a href="{% url 'post-edit' object.id %}">+ Edit Blog Post</a>
+        <a href="{% url 'post-delete' post.id %}">+ Delete Blog Post</a>
     </div>
 {% endblock content %}

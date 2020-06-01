@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Are you sure you want to delete -- {{ object.title }}</p>
+        <input type="submit" value="Confirm">
+    </form>
+    <a href="{{ post.get_absolute_url }}">Cancel</a>
+{% endblock content %}
